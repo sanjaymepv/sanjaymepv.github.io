@@ -1,0 +1,255 @@
+/* ============================================================
+   Way Web Design System — Colors & Type
+   Extracted from Figma ("Way Web Design System.fig")
+   ============================================================ */
+
+/* --- Webfonts (Google Fonts: Plus Jakarta Sans + Inter) ----- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+  /* =========================================================
+     PRIMITIVE COLORS (from /Color/Frame-1000006222)
+     Named scales: 100 = lightest, 1000+ = darkest.
+     ========================================================= */
+
+  /* Brand — the only 2 "brand" swatches in the system */
+  --brand-ink:          rgb(16, 18, 35);     /* Oxford blue 1000 */
+  --brand-aqua:         rgb(12, 240, 187);   /* Aquamarine 500  */
+
+  /* Oxford blue (primary dark / navy) */
+  --oxford-100:         rgb(241, 242, 249);
+  --oxford-200:         rgb(230, 232, 244);
+  --oxford-300:         rgb(212, 216, 234);
+  --oxford-400:         rgb(181, 188, 221);
+  --oxford-500:         rgb(160, 166, 212);
+  --oxford-600:         rgb(129, 138, 196);
+  --oxford-700:         rgb( 31,  39,  79);
+  --oxford-800:         rgb( 19,  21,  37);
+  --oxford-900:         rgb( 16,  18,  35);  /* brand ink */
+  --oxford-1000:        rgb( 21,  23,  46);  /* most-used text */
+
+  /* Aquamarine (brand accent) */
+  --aqua-100:           rgb(231, 254, 248);
+  --aqua-200:           rgb(200, 252, 236);
+  --aqua-300:           rgb(166, 248, 224);
+  --aqua-400:           rgb(114, 244, 207);
+  --aqua-500:           rgb( 12, 240, 187);
+  --aqua-600:           rgb(  7, 195, 152);
+  --aqua-700:           rgb(  7, 146, 113);
+  --aqua-800:           rgb(  5,  97,  76);
+  --aqua-900:           rgb(  2,  49,  38);
+
+  /* Neutrals / Grey */
+  --grey-000:           rgb(255, 255, 255);
+  --grey-50:            rgb(250, 250, 250);
+  --grey-100:            rgb(248, 248, 252);
+  --grey-150:            rgb(243, 245, 249);
+  --grey-200:            rgb(233, 234, 236);
+  --grey-250:            rgb(229, 231, 235);
+  --grey-300:            rgb(211, 213, 217);
+  --grey-400:            rgb(189, 192, 198);
+  --grey-500:            rgb(167, 171, 179);
+  --grey-600:            rgb(146, 150, 161);
+  --grey-700:            rgb(113, 118, 131);
+  --grey-800:            rgb( 85,  89,  99);
+  --grey-900:            rgb( 28,  30,  33);
+  --grey-1000:           rgb( 14,  15,  16);
+
+  /* Semantic / additional */
+  --blue-100:           rgb(235, 240, 255);
+  --blue-500:           rgb( 75, 127, 255);
+  --blue-600:           rgb( 27,  91, 255);
+
+  --purple-100:         rgb(240, 229, 251);
+  --purple-500:         rgb(151,  92, 255);
+  --purple-600:         rgb(151,  71, 255);
+
+  --red-100:            rgb(252, 233, 234);
+  --red-500:            rgb(231,  19,  70);
+  --red-600:            rgb(218,  30,  40);
+
+  --orange-100:         rgb(255, 244, 235);
+  --orange-500:         rgb(245, 118,   0);
+
+  --green-100:          rgb(230, 249, 235);
+  --green-500:          rgb(  7, 146, 113); /* ≈ aqua-700, used for success */
+  --green-700:          rgb(  5,  97,  76);
+
+  --teal-100:           rgb(230, 243, 244);
+  --teal-500:           rgb(  0, 132, 137);
+
+  /* =========================================================
+     SEMANTIC TOKENS (aliases)
+     ========================================================= */
+
+  /* Text / foreground */
+  --fg-1:               var(--oxford-1000);   /* primary text, 4,561× */
+  --fg-2:               var(--grey-800);      /* secondary text */
+  --fg-3:               var(--grey-700);      /* tertiary / meta */
+  --fg-4:               var(--grey-500);      /* muted / hint */
+  --fg-disabled:        var(--grey-400);
+  --fg-inverse:         var(--grey-000);
+  --fg-link:            var(--blue-600);
+  --fg-success:         var(--green-500);
+  --fg-danger:          var(--red-600);
+  --fg-warning:         var(--orange-500);
+
+  /* Background / surface */
+  --bg-canvas:          var(--grey-000);      /* page */
+  --bg-subtle:          var(--grey-100);      /* page sidebar / muted panels */
+  --bg-muted:           var(--grey-150);      /* chips, disabled buttons */
+  --bg-surface:         var(--grey-000);
+  --bg-inverse:         var(--brand-ink);
+  --bg-brand:           var(--brand-ink);
+  --bg-accent:          var(--brand-aqua);
+  --bg-success-soft:    var(--green-100);
+  --bg-danger-soft:     var(--red-100);
+  --bg-warning-soft:    var(--orange-100);
+  --bg-info-soft:       var(--blue-100);
+
+  /* Borders / dividers */
+  --border-subtle:      var(--grey-250);
+  --border-default:     var(--grey-300);
+  --border-strong:      var(--grey-400);
+  --border-inverse:     var(--oxford-1000);
+
+  /* =========================================================
+     SPACING (4-based scale) — from /Spacing/Spacing
+     ========================================================= */
+  --spacing-xx-sm:      4px;
+  --spacing-x-sm:       8px;
+  --spacing-sm:         12px;
+  --spacing-md:         16px;
+  --spacing-big:        20px;
+  --spacing-x-big:      24px;
+  --spacing-xx-big:     28px;
+  --spacing-xxx-big:    32px;
+  --spacing-lg:         40px;
+  --spacing-x-lg:       48px;
+  --spacing-xx-lg:      64px;
+  --spacing-xxx-lg:     80px;
+  --spacing-huge:       96px;
+  --spacing-x-huge:     128px;
+  --spacing-xx-huge:    160px;
+  --spacing-xxx-huge:   192px;
+
+  /* =========================================================
+     RADII — observed from buttons, cards, chips
+     ========================================================= */
+  --radius-xs:          4px;   /* small buttons, chips */
+  --radius-sm:          6px;   /* medium buttons */
+  --radius-md:          8px;   /* large buttons, swatches, inputs */
+  --radius-lg:          12px;  /* cards, panels */
+  --radius-xl:          20px;  /* hero / feature cards */
+  --radius-pill:        999px; /* fully rounded */
+
+  /* =========================================================
+     ELEVATION — from /Shadows-Blurs
+     ========================================================= */
+  --shadow-xs:          0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+  --shadow-sm:          0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+                        0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  --shadow-md:          0px 4px 8px -2px rgba(16, 24, 40, 0.10),
+                        0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-lg:          0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+                        0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-xl:          0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+                        0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  --shadow-2xl:         0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+
+  /* Inset divider (used on sidebars throughout the Figma) */
+  --shadow-inset-divider: inset 0px -1px 0px 0px rgb(229, 231, 235);
+
+  --blur-sm:            blur(4px);
+  --blur-md:            blur(8px);
+  --blur-lg:            blur(16px);
+  --blur-xl:            blur(24px);
+  --blur-2xl:           blur(40px);
+
+  /* =========================================================
+     TYPOGRAPHY — Plus Jakarta Sans (display) + Inter (UI/body)
+     ========================================================= */
+  --font-display:       "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:          "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:          "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Display / heading sizes (Plus Jakarta Sans Bold) */
+  --font-size-hero:     96px;
+  --font-size-h1:       52px;  /* Page heading – used in sidebars */
+  --font-size-h2:       48px;
+  --font-size-h3:       44px;
+  --font-size-h4:       40px;
+  --font-size-h5:       32px;
+  --font-size-h6:       26px;
+  --font-size-h7:       24px;
+  --font-size-h8:       20px;
+  --font-size-h9:       18px;
+  --font-size-h10:      16px;
+  --font-size-h11:      14px;
+
+  --font-size-body-lg:  18px;
+  --font-size-body:     16px;
+  --font-size-body-sm: 14px;
+  --font-size-caption:  12px;
+  --font-size-micro:    10px;
+
+  --line-height-tight:  1.1;
+  --line-height-snug:   1.3;
+  --line-height-normal: 1.4;
+  --line-height-relaxed:1.5;
+  --line-height-loose:  1.6;
+
+  --letter-spacing-tight:    -0.02em;
+  --letter-spacing-normal:   0;
+  --letter-spacing-wide:     0.02em;
+  --letter-spacing-caps:     0.16em; /* e.g. "WAY.COM" cover caps */
+
+  --font-weight-regular:    400;
+  --font-weight-medium:     500;
+  --font-weight-semibold:   600;
+  --font-weight-bold:       700;
+  --font-weight-extrabold:  800;
+}
+
+/* ==============================================================
+   Base element styles (opt-in by wrapping inside .way or :root)
+   ============================================================== */
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  color: var(--fg-1);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
+  line-height: 56px;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h2, .h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--font-size-h2); line-height: 1.4; letter-spacing: -0.02em; margin: 0; }
+h3, .h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--font-size-h3); line-height: 1.4; letter-spacing: -0.02em; margin: 0; }
+h4, .h4 { font-family: var(--font-display); font-weight: 700; font-size: var(--font-size-h4); line-height: 1.4; letter-spacing: -0.02em; margin: 0; }
+h5, .h5 { font-family: var(--font-display); font-weight: 700; font-size: var(--font-size-h5); line-height: 1.4; letter-spacing: -0.02em; margin: 0; }
+h6, .h6 { font-family: var(--font-display); font-weight: 700; font-size: var(--font-size-h6); line-height: 1.4; letter-spacing: -0.02em; margin: 0; }
+
+p  { font-family: var(--font-sans); font-size: var(--font-size-body); line-height: var(--line-height-relaxed); color: var(--fg-2); margin: 0; }
+small, .caption { font-size: var(--font-size-caption); color: var(--fg-3); }
+code, pre { font-family: var(--font-mono); font-size: 14px; }
+a { color: var(--fg-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--fg-4);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+}

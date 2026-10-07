@@ -1,0 +1,11 @@
+﻿Column,Required,Format,What to write,Example
+Brand Name,Yes,"Text, Title Case","Public brand name exactly as it should appear on screen. Way brands are 'Way X'. The brand is always 'Way' or 'Way.com', never lowercase 'way.com'.",Way Car Wash
+Description,Yes,"2–3 sentences, 200–400 characters","What the brand does and how it is sold. Plain and factual — second person, benefit first, no stacked marketing adjectives. Ends with a full stop.","A subscription and single-visit marketplace for car washes, with membership tiers that roll across partner sites rather than locking you to one location."
+category,Yes,One value from the list,Mobility | Care | Fuel | Finance | Support | Membership | Travel | Fleet | Logistics. Ask before adding a new value — category drives grouping and filtering on the canvas.,Care
+status,Yes,One value from the list,Live | Beta | Pilot | Concept | Retired,Live
+website url,No,"Domain or path, no https://",Live destination for the brand. Leave blank for concepts that have no page yet.,way.com/car-wash
+Brand keywords,Yes,10 words separated by ' | ',"Brand character and vocabulary words, most defining first. Single words, Title Case, no duplicates in a row. These render as traits in the brand drawer and power the Keywords view, so pick words that distinguish this brand from its siblings.",Fresh | Clean | Generous | Routine | Local | Bright | Effortless | Consistent | Cheerful | Modern
+Brand Guidelines Link,No,Shareable link,"Drive/Figma/Notion link to the brand guideline doc. Make sure the link is open to the team, not restricted.",drive.google.com/way-car-wash-brand-guidelines
+Logo Pack,No,Shareable folder link,"Folder containing transparent PNG and SVG logos, square, minimum 512×512. Do not paste images into the cell — link the folder.",drive.google.com/way-car-wash-logo-pack
+,,,,
+Notes,,,One brand per row. Do not rename or reorder the column headers — the import reads them by name. Row 2 is a filled example; overwrite or delete it before sending back.,
