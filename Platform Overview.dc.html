@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/way-web-design-system-14d638cd-2e1b-4316-92de-e13bfa756d44/colors_and_type.css">
+<style>
+doc-page:not(:defined){visibility:hidden}
+a{color:var(--blue-600);text-decoration:none;border-bottom:1px solid rgba(27,91,255,.28)}
+a:hover{color:var(--oxford-900);border-bottom-color:var(--oxford-900)}
+.kt{break-inside:avoid;orphans:3;widows:3}
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<doc-page margin="0.9in">
+<div slot="footer" style="display:flex;justify-content:space-between;align-items:center;font:500 10px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-600);padding-top:10px;border-top:1px solid var(--grey-250)">
+  <span>Brands Identity Repo</span>
+  <span>OVERVIEW</span>
+</div>
+
+<h1 style="font:700 44px/1.08 'Plus Jakarta Sans',sans-serif;letter-spacing:-.02em;color:var(--oxford-1000);margin:0 0 22px">Brands Identity Repo</h1>
+
+<p style="font: 400 17px/1.6 Inter,sans-serif; color: var(--grey-800); margin: 0 0 16px; max-width: 41em; font-size: 15px">A centralized platform for understanding, discovering, and working with all the brands, products and solutions within an organization. It brings together brands, their relationships, brand information, guidelines, assets and visual references into one accessible place.</p>
+<p style="font: 400 17px/1.6 Inter,sans-serif; color: var(--grey-800); margin: 0 0 44px; max-width: 42em; font-size: 15px">On top of this repository sits an AI-powered moodboard generator that helps teams make brand and design decisions based on the personality and characteristics of each brand.</p>
+
+
+<hr style="border:none;border-top:1px solid var(--grey-250);margin:0 0 40px">
+<h2 style="font:700 25px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;color:var(--oxford-1000);margin:0 0 16px">The problem</h2>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 16px;max-width:36em">As an organization grows it accumulates brands, products, sub-brands, microsites, campaigns, assets and guidelines. Over time that information scatters across Figma files, folders, documents, drives, websites and individual teams, which makes simple questions hard to answer.</p>
+<div class="kt" style="border-left:2px solid var(--oxford-1000);padding:4px 0 4px 22px;margin:0 0 44px">
+  <p style="font:500 15px/1.8 Inter,sans-serif;color:var(--oxford-1000);margin:0">What brands do we have? How are they related? Who owns them? Where can I find their assets? Who should I contact? What are the brand guidelines?</p>
+</div>
+
+
+<hr style="border:none;border-top:1px solid var(--grey-250);margin:0 0 40px">
+<h2 style="font:700 25px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;color:var(--oxford-1000);margin:0 0 18px">01. Brand Repository</h2>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 18px;max-width:36em">Each brand gets a dedicated space holding the information people actually ask for. Instead of searching through multiple places, everyone starts here.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px 14px;font:400 13.5px/1.5 Inter,sans-serif;color:var(--grey-800);margin:0 0 32px">
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Brand overview</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Parent brand</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Related brands</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Brand personality</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Keywords</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Colors</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Typography</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Guidelines</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Design assets</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>References</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Important links</span></div>
+  <div style="display:flex;gap:8px"><span style="color:#E71346">✦</span><span>Brand owner / contact</span></div>
+</div>
+
+<div class="kt" style="margin:0 0 24px">
+  <h3 style="font:600 17px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 6px">Understand the landscape</h3>
+  <p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0;max-width:36em">Brands are shown in relation to each other rather than as isolated entities: parent brand at the centre, product brands, service brands and microsites around it. A visual map that answers "what exists, and how does everything connect?"</p>
+</div>
+
+<div class="kt" style="margin:0 0 24px">
+  <h3 style="font:600 17px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 6px">Centralized access</h3>
+  <p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0;max-width:36em">One piece of brand information sits in Figma, another in a PDF, another in Drive, another only in a particular designer's head. The platform does not replace those tools. It becomes the single access point to what already exists.</p>
+</div>
+
+<div class="kt" style="margin:0 0 24px">
+  <h3 style="font:600 17px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 6px">Search and discover</h3>
+  <p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0;max-width:36em">Search a brand and find its information, assets and contacts. No more confusion about what a brand is, where the guideline lives, who owns it, or who to reach out to.</p>
+</div>
+
+<div class="kt" style="margin:0 0 44px">
+  <h3 style="font:600 17px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px">Faster onboarding</h3>
+  <p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0;max-width:36em">A new employee can explore the platform instead of learning the brand ecosystem through scattered documents and conversations.</p>
+</div>
+
+<figure class="kt" style="margin:0 0 40px">
+  <img src="uploads/pasted-1789110688836-0.png" alt="The brand web: the parent brand at the centre, owned brands on the inner orbit, adjacent and external brands further out." style="display:block;width:100%;border:1px solid var(--grey-250);border-radius:12px">
+  <figcaption style="font: 400 12.5px/1.55 Inter,sans-serif; color: var(--grey-700); margin-top: 10px; font-weight: 500">The brand web: the parent brand at the centre, owned brands on the inner orbit, adjacent and external brands further out. <strong style="font-weight:600;color:#000000">Please note: the data shown is dummy and working data, not final brand information.</strong></figcaption>
+</figure>
+
+<figure class="kt" style="margin:0 0 40px">
+  <img src="uploads/pasted-1789110973155-0.png" alt="A brand record opened from the canvas" style="display:block;width:100%;border:1px solid var(--grey-250);border-radius:12px">
+  <figcaption style="font:400 12.5px/1.55 Inter,sans-serif;color:var(--grey-700);margin-top:10px">Clicking a brand opens its record: description, live link, keywords, colors, and the guidelines and logo assets with their last-updated dates.</figcaption>
+</figure>
+
+
+<hr style="border:none;border-top:1px solid var(--grey-250);margin:0 0 40px">
+<h2 style="font:700 25px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;color:var(--oxford-1000);margin:0 0 16px">02. Moodboard Generator</h2>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 16px;max-width:36em">The repository is the foundation, but once the platform knows each brand's personality, keywords, tone and visual identity, it can help with new decisions. A brand defined as <strong style="font-weight:600;color:var(--oxford-1000)">Trustworthy, Modern, Energetic, Approachable</strong> gives the generator enough to explore colors, typography, imagery, graphic styles, patterns and overall art direction around it.</p>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 18px;max-width:36em">It is not only for building an identity from scratch. It supports everyday decisions:</p>
+<ul style="font: 400 15px/1.7 Inter,sans-serif; color: var(--grey-800); margin: 0 0 18px; padding: 0; max-width: 36em; list-style: none; display: grid; gap: 7px; margin-bottom: 38px">
+  <li style="display:flex;gap:10px"><span style="color:#E71346">✦</span><span>What should this campaign feel like?</span></li>
+  <li style="display:flex;gap:10px"><span style="color:#E71346">✦</span><span>What colors could work for this new microsite, while keeping its relationship to the wider ecosystem?</span></li>
+  <li style="display:flex;gap:10px"><span style="color:#E71346">✦</span><span>What kind of imagery should we use?</span></li>
+  <li style="display:flex;gap:10px"><span style="color:#E71346">✦</span><span>How can this product feel more energetic?</span></li>
+</ul>
+
+<figure class="kt" style="margin:0 0 40px">
+  <img src="uploads/pasted-1789110694483-0.png" alt="The moodboard generator: personality keywords are weighted, exclusions set, then a visual direction is generated with the reasoning behind it." style="display:block;width:100%;border:1px solid var(--grey-250);border-radius:12px">
+  <figcaption style="font:400 12.5px/1.55 Inter,sans-serif;color:var(--grey-700);margin-top:10px">The moodboard generator: personality keywords are weighted, exclusions set, then a visual direction is generated with the reasoning behind it.</figcaption>
+</figure>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 44px;max-width:36em">Designers start from a direction already connected to the brand's personality rather than a blank canvas, and everyone works from the same reference instead of their own interpretation. It is no longer guesswork or personal choice: the directions are grounded in color theory, psychology and the mental models people already carry about how a brand should feel.</p>
+
+
+<hr style="border:none;border-top:1px solid var(--grey-250);margin:0 0 40px">
+<h2 style="font:700 25px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;color:var(--oxford-1000);margin:0 0 20px">Key benefits</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 44px">
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7S18.5 19 12 19 1.5 12 1.5 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg>Brand awareness</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Understand the complete brand landscape and how brands relate to each other.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m12 2 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg>Centralized access</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Scattered information, assets, guidelines and resources in one place.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="11" cy="11" r="7"></circle><path d="m20.5 20.5-4.3-4.3"></path></svg>Easy discovery</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Find brands, assets, information and the right contact quickly.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13A4 4 0 0 1 16 11"></path></svg>Less dependency on individuals</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Brand knowledge stops living only with one person or team.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"></path></svg>Better collaboration</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Designers, marketers, product teams and stakeholders share one source.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M13 2 3.5 13.5H11l-1 8.5L20.5 10.5H13l1-8.5Z"></path></svg>Faster, more consistent decisions</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">Personality and established characteristics become the basis for design choices.</p>
+  </div>
+  <div class="kt" style="border:1px solid var(--grey-250);border-radius:12px;padding:20px 22px">
+    <p style="font:600 14px/1.4 Inter,sans-serif;color:var(--oxford-1000);margin:0 0 7px;display:flex;align-items:center;gap:9px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E71346" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><ellipse cx="12" cy="5.5" rx="8.5" ry="3"></ellipse><path d="M3.5 5.5v13c0 1.66 3.81 3 8.5 3s8.5-1.34 8.5-3v-13"></path><path d="M3.5 12c0 1.66 3.81 3 8.5 3s8.5-1.34 8.5-3"></path></svg>Single source of truth</p>
+    <p style="font:400 13.5px/1.6 Inter,sans-serif;color:var(--grey-800);margin:0">One authoritative record per brand, so teams stop working from outdated or conflicting versions.</p>
+  </div>
+</div>
+
+
+<hr style="border:none;border-top:1px solid var(--grey-250);margin:0 0 40px">
+<h2 style="font:700 25px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;color:var(--oxford-1000);margin:0 0 16px">The bigger vision</h2>
+<p style="font:400 15px/1.7 Inter,sans-serif;color:var(--grey-800);margin:0 0 26px;max-width:36em">A single source of truth for the organization's brand ecosystem, where anyone can discover a brand, understand it, find its resources, read its personality, explore its visual direction and make an informed design decision. Brand information stops being scattered documents and becomes a connected, usable system.</p>
+
+<div class="kt" style="border: 1px solid var(--aqua-300); border-radius: 12px; padding: 24px 26px; border-color: var(--red-500); background-color: #FFEAEF">
+  <p style="font:600 10px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#E71346;margin:0 0 10px">In one line</p>
+  <p style="font:500 16px/1.6 Inter,sans-serif;color:var(--oxford-1000);margin:0">A centralized brand ecosystem and intelligence platform that helps people discover, understand and work with the organization's brands, while using brand personality and keywords to guide visual and design decisions.</p>
+</div>
+</doc-page>
+</x-dc>
+</body>
+</html>
