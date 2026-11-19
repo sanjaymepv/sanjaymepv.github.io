@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Way – Holiday Edition</title>
-<meta name="theme-color" content="#BC0101">
 <link rel="manifest" href="manifest.webmanifest">
 <!-- iOS home-screen install -->
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,9 +26,9 @@
 <!--/LAUNCH-->
 <link rel="icon" type="image/png" href="assets/icon-192.png">
 <style>
-  :root { --bg: #BC0101; --ink: #fff; }
+  :root { --red: #BC0101; --ink: #15172E; }  /* no theme-color: browsers keep their own neutral bars */
   * { box-sizing: border-box; margin: 0; }
-  html, body { height: 100%; background: var(--bg); color: var(--ink);
+  html, body { height: 100%; background: #fff; color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .screen { position: fixed; inset: 0; display: none; }
   .on { display: block; }
@@ -37,18 +36,25 @@
   /* 1. Landing page (opened in browser) */
   #landing { display: none; padding: max(48px, env(safe-area-inset-top)) 24px 32px; text-align: center; overflow-y: auto; }
   #landing.on { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-  #landing img.icon { width: 120px; height: 120px; border-radius: 27px; box-shadow: 0 12px 32px rgba(0,0,0,.3); }
+  #landing img.icon { width: 120px; height: 120px; border-radius: 27px; box-shadow: 0 12px 32px rgba(0,0,0,.18); }
   #landing h1 { font-size: 26px; }
-  #landing p { opacity: .85; line-height: 1.5; max-width: 340px; }
-  #installBtn { display: none; padding: 14px 28px; border: 0; border-radius: 999px; background: #fff;
-    color: var(--bg); font-size: 16px; font-weight: 700; cursor: pointer; }
-  .steps { text-align: left; background: rgba(255,255,255,.12); border-radius: 16px; padding: 16px 20px; max-width: 340px; }
+  #landing p { opacity: .75; line-height: 1.5; max-width: 340px; }
+  #installBtn { display: none; padding: 14px 28px; border: 0; border-radius: 999px; background: var(--red);
+    color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+  .steps { text-align: left; background: #F3F4F7; border-radius: 16px; padding: 16px 20px; max-width: 340px; }
   .steps li { margin: 6px 0; line-height: 1.4; }
   .steps[hidden] { display: none; }
 
   /* 2. Splash */
   #splash { background: #C3C8D5 url(assets/splash-poster.jpg) center / cover; } /* first video frame shows before the video is ready */
-  #splash video { width: 100%; height: 100%; object-fit: cover; }
+  /* stage = the video's own 9:16 box, cover-fitted, so the line can sit at a fixed spot in the frame */
+  #splash { overflow: hidden; }
+  .splash-stage { position: absolute; left: 50%; top: 50%; width: max(100vw, 56.25vh); height: max(100vh, 177.78vw); transform: translate(-50%, -50%); }
+  .splash-stage video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .xmas-line { position: absolute; left: 0; right: 0; top: 88.83%; margin: 0; transform: translateY(-50%); text-align: center;
+    font: 500 18px/1.2 'Plus Jakarta Sans', sans-serif; color: #fff; opacity: 0; }
+  .xmas-line.in { animation: line-in .7s cubic-bezier(.33, 1, .68, 1) forwards; }
+  @keyframes line-in { from { opacity: 0; transform: translateY(calc(-50% + 7px)); filter: blur(2px); } to { opacity: 1; transform: translateY(-50%); filter: none; } }
   #splash.out { animation: fade .45s ease forwards; }
   @keyframes fade { to { opacity: 0; } }
 
@@ -74,7 +80,7 @@
     height: calc(var(--nav-h) * var(--z, 1)); overflow: hidden; }
   #home.in { animation: rise .5s ease backwards; } /* not "both": a leftover transform would un-fix the tab bar */
   @keyframes rise { from { opacity: 0; transform: scale(1.02); } }
-  @media (prefers-reduced-motion: reduce) { #splash.out, #home.in { animation-duration: .01s; } }
+  @media (prefers-reduced-motion: reduce) { #splash.out, #home.in, .xmas-line.in { animation-duration: .01s; } }
 </style>
 </head>
 <body>
@@ -94,12 +100,15 @@
     <li>Tap <b>Add to Home screen</b> → <b>Install</b></li>
     <li>Open <b>Way</b> from your home screen</li>
   </ol>
-  <p style="font-size:13px;opacity:.6">Preview the app flow here: <a href="?demo" style="color:#fff">run splash → home</a></p>
+  <p style="font-size:13px;opacity:.6">Preview the app flow here: <a href="?demo" style="color:var(--red)">run splash → home</a></p>
 </main>
 
 <section id="splash" class="screen" aria-label="Splash screen">
   <!-- muted + playsinline are required for autoplay on iOS/Android -->
-  <video id="splashVid" src="assets/splash.mp4" poster="assets/splash-poster.jpg" muted playsinline preload="auto"></video>
+  <div class="splash-stage">
+    <video id="splashVid" src="assets/splash.mp4" poster="assets/splash-poster.jpg" muted playsinline preload="auto"></video>
+    <p class="xmas-line" id="xmasLine">Merry Miles Ahead</p>
+  </div>
 </section>
 
 <section id="home" class="screen" aria-label="Home screen">
@@ -136,6 +145,10 @@
     };
     $('splash').classList.add('on');
     v.addEventListener('ended', toHome);
+    // line appears once "way" is fully written (5.35s into the video)
+    const line = $('xmasLine');
+    const watch = () => v.currentTime >= 5.35 ? line.classList.add('in') : requestAnimationFrame(watch);
+    v.addEventListener('playing', () => requestAnimationFrame(watch), { once: true });
     $('splash').addEventListener('click', toHome);      // tap to skip
     v.play().catch(() => setTimeout(toHome, 1500));     // autoplay blocked (e.g. iOS Low Power Mode): show poster briefly
     setTimeout(toHome, 13000);                          // safety net if the video stalls
